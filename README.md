@@ -5,7 +5,7 @@
 | Name                                                  |    Stmts |     Miss |   Branch |   BrPart |   Cover |   Missing |
 |------------------------------------------------------ | -------: | -------: | -------: | -------: | ------: | --------: |
 | src/invoice2data/\_\_init\_\_.py                      |        7 |        0 |        0 |        0 |    100% |           |
-| src/invoice2data/\_\_main\_\_.py                      |      206 |       13 |       70 |       13 |     91% |108-\>113, 113-\>118, 148, 157, 207, 241-243, 258, 266-\>exit, 407, 409, 412, 440-441, 504-\>507, 508-509 |
+| src/invoice2data/\_\_main\_\_.py                      |      238 |       14 |       86 |       14 |     91% |108-\>113, 113-\>118, 148, 157, 207, 241-243, 258, 266-\>exit, 422, 424, 427, 459-460, 540, 584-\>587, 588-589 |
 | src/invoice2data/ai/\_\_init\_\_.py                   |        6 |        0 |        0 |        0 |    100% |           |
 | src/invoice2data/ai/\_\_interface\_\_.py              |       18 |        2 |        2 |        0 |     90% |    33, 52 |
 | src/invoice2data/ai/config.py                         |       11 |        0 |        0 |        0 |    100% |           |
@@ -16,15 +16,15 @@
 | src/invoice2data/ai/schema\_json.py                   |       13 |        0 |        2 |        0 |    100% |           |
 | src/invoice2data/ai/template\_generator.py            |       42 |        3 |       16 |        3 |     90% |76, 83, 134 |
 | src/invoice2data/api.py                               |      149 |       14 |       62 |        8 |     88% |152-\>157, 179, 258-259, 395-\>397, 415-423, 438-\>436, 440, 456-\>exit, 465 |
-| src/invoice2data/exceptions.py                        |       17 |        1 |        4 |        2 |     86% |41-\>43, 69 |
+| src/invoice2data/exceptions.py                        |       17 |        0 |        4 |        1 |     95% |   41-\>43 |
 | src/invoice2data/extract/\_\_init\_\_.py              |        0 |        0 |        0 |        0 |    100% |           |
-| src/invoice2data/extract/\_dates.py                   |       41 |        3 |       10 |        1 |     92% |34-35, 115 |
+| src/invoice2data/extract/\_dates.py                   |       41 |        2 |       10 |        0 |     96% |     34-35 |
 | src/invoice2data/extract/\_regex.py                   |       24 |        0 |        2 |        0 |    100% |           |
 | src/invoice2data/extract/candidates.py                |       58 |        4 |       20 |        3 |     91% |77-78, 112-\>110, 146, 148 |
 | src/invoice2data/extract/excalibur.py                 |       35 |        0 |       10 |        0 |    100% |           |
-| src/invoice2data/extract/invoice\_template.py         |      246 |       19 |      128 |       18 |     90% |85, 117, 122, 185, 191, 196, 241, 249, 276-\>270, 369, 378-379, 425-\>exit, 428-\>exit, 497-\>492, 504-\>503, 524, 533-534, 551-557, 584-585 |
+| src/invoice2data/extract/invoice\_template.py         |      246 |       18 |      128 |       17 |     90% |85, 117, 122, 185, 191, 241, 249, 276-\>270, 369, 378-379, 425-\>exit, 428-\>exit, 497-\>492, 504-\>503, 524, 533-534, 551-557, 584-585 |
 | src/invoice2data/extract/labels.py                    |       33 |        0 |        6 |        0 |    100% |           |
-| src/invoice2data/extract/loader.py                    |       65 |        1 |       22 |        3 |     95% |63-\>61, 112, 119-\>95 |
+| src/invoice2data/extract/loader.py                    |       96 |        3 |       34 |        4 |     95% |76-80, 82-\>74, 118, 183-\>170 |
 | src/invoice2data/extract/parsers/\_\_init\_\_.py      |        3 |        0 |        0 |        0 |    100% |           |
 | src/invoice2data/extract/parsers/\_\_interface\_\_.py |        0 |        0 |        0 |        0 |    100% |           |
 | src/invoice2data/extract/parsers/lines.py             |      136 |        3 |       80 |        8 |     95% |77, 120-\>137, 147-\>149, 215-\>214, 246, 251, 340-\>337, 358-\>365 |
@@ -66,7 +66,7 @@
 | tests/test\_area\_extraction.py                       |       44 |        0 |        0 |        0 |    100% |           |
 | tests/test\_camelot.py                                |       78 |        6 |        2 |        1 |     91% |   157-165 |
 | tests/test\_candidates.py                             |       37 |        0 |        0 |        0 |    100% |           |
-| tests/test\_cli.py                                    |      231 |       33 |       64 |        6 |     83% |23, 60-\>59, 154, 183, 210, 383, 393-416, 424-455, 459 |
+| tests/test\_cli.py                                    |      254 |       33 |       66 |        6 |     85% |23, 60-\>59, 154, 183, 210, 383, 393-416, 424-455, 493 |
 | tests/test\_cli\_logging.py                           |       33 |        0 |        0 |        0 |    100% |           |
 | tests/test\_cross\_page\_lines.py                     |       37 |        0 |        0 |        0 |    100% |           |
 | tests/test\_csv\_output.py                            |       47 |        0 |        0 |        0 |    100% |           |
@@ -89,7 +89,7 @@
 | tests/test\_labels.py                                 |       42 |        0 |        2 |        0 |    100% |           |
 | tests/test\_lib.py                                    |      217 |       18 |       36 |        6 |     91% |37-38, 52, 74-76, 113-115, 147, 239, 254, 288-296, 340 |
 | tests/test\_lines\_replace.py                         |       20 |        1 |        0 |        0 |     95% |        12 |
-| tests/test\_loader.py                                 |      103 |        0 |        0 |        0 |    100% |           |
+| tests/test\_loader.py                                 |      131 |        0 |        0 |        0 |    100% |           |
 | tests/test\_loader\_errors.py                         |       19 |        0 |        0 |        0 |    100% |           |
 | tests/test\_main.py                                   |        9 |        0 |        0 |        0 |    100% |           |
 | tests/test\_main\_helpers.py                          |       47 |        0 |        0 |        0 |    100% |           |
@@ -98,6 +98,7 @@
 | tests/test\_output\_xml.py                            |       25 |        0 |        0 |        0 |    100% |           |
 | tests/test\_paddleocr.py                              |       32 |        0 |        0 |        0 |    100% |           |
 | tests/test\_pdf\_backends.py                          |       39 |        0 |        0 |        0 |    100% |           |
+| tests/test\_property.py                               |       66 |        2 |        0 |        0 |     97% |   111-112 |
 | tests/test\_regex\_cache.py                           |       16 |        0 |        0 |        0 |    100% |           |
 | tests/test\_regex\_engine.py                          |       16 |        0 |        0 |        0 |    100% |           |
 | tests/test\_schema.py                                 |       18 |        0 |        0 |        0 |    100% |           |
@@ -111,7 +112,7 @@
 | tests/test\_text\_cache.py                            |       39 |        0 |        0 |        0 |    100% |           |
 | tests/test\_unece\_uom.py                             |       45 |        0 |        0 |        0 |    100% |           |
 | tests/test\_validators.py                             |       28 |        0 |        0 |        0 |    100% |           |
-| **TOTAL**                                             | **4488** |  **187** |  **972** |  **119** | **94%** |           |
+| **TOTAL**                                             | **4668** |  **189** | **1002** |  **118** | **94%** |           |
 
 
 ## Setup coverage badge
